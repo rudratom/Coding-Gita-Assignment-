@@ -1700,3 +1700,396 @@ false
 **Answer:**
 
 The `===` operator checks both the value and the data type without automatically converting values. This makes comparisons more predictable and helps avoid unexpected results. Therefore, `===` is generally preferred over `==` in JavaScript.****
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+# Part D: Relational Operators
+
+## 5. Greater Than (>)
+
+### Q1
+
+```javascript
+let studentMarks = 78;
+let passingMarks = 40;
+let result = passingMarks < studentMarks;
+console.log("Student has passed the exam : ", result )
+```
+
+### Q2
+
+```javascript
+let tempToday = 35;
+let tempYesterday = 28;
+console.log("today is hotter: ", tempToday > tempYesterday)
+```
+
+### Q3
+
+```javascript
+console.log(15 > 10);
+console.log(10 > 15);
+console.log(10 > 10);
+```
+
+### Q4
+
+```javascript
+console.log("20" > 15);
+output: true
+
+console.log("5" > "10");
+output: true
+
+console.log("abc" > 10);
+output: false
+```
+
+### Q5
+
+```javascript
+console.log(null > 0 )
+console.log(undefined > 0)
+```
+
+**Explanation:**
+
+null>0 --> false
+
+js compares null with 0, it converts null 0 so, 0>0 is false because both values are equal.
+
+undefined > 0 ---> false
+
+undefined get converted into NaN during the comparison,since comparison involving NaN returns false.
+
+### Q6
+
+```javascript
+let shopItems = 120;
+let customerReq = 85;
+console.log("shop item in stock: ", shopItems > customerReq)
+```
+
+### Q7
+
+```javascript
+console.log(true > false);
+console.log("10" > "2");
+console.log(NaN > 5);
+```
+
+---
+
+## 6. Less Than (<)
+
+### Q1
+
+```javascript
+let maximumSpeed = 60;
+let vehicleSpeed = 60;
+console.log("the vehicle is within the speed limit: ", maximumSpeed < vehicleSpeed)
+```
+
+### Q2
+
+```javascript
+let agePerson = 16;
+let ageReq = 18;
+console.log("the person is underage : ", agePerson < ageReq)
+```
+
+### Q3
+
+```javascript
+console.log(8 < 12);
+console.log(20 < 10);
+console.log(7 < 7);
+```
+
+### Q4
+
+```javascript
+console.log("8" < 10);
+console.log("20" < "3");
+console.log("hello" < 5);
+```
+
+### Q5
+
+```javascript
+console.log(null > 0 )
+console.log(undefined > 0)
+```
+
+**Explanation:**
+
+null < 0 → false
+
+When JavaScript compares null with 0, it converts null to 0. So, 0 < 0 is false because both values are equal.
+
+undefined < 0 → false
+
+In the case of undefined, JavaScript converts it to NaN (Not a Number). Any comparison involving NaN returns false, so undefined < 0 is also false.
+
+### Q6
+
+```javascript
+let tankCapacity = 500;
+let waterLevel = 375;
+console.log("tank is full: ", waterLevel < tankCapacity)
+```
+
+### Q7
+
+```javascript
+console.log(false < true);
+```
+
+**Explanation:** value of true is 1 and value of false is 0, since 1 > 0 so it will print true.
+
+```javascript
+console.log("5" < "15");
+```
+
+**Explanation:** this will print false because as both of them are strings so it will compare the initial value of both the strings hence, 2>1 so it will print false.
+
+```javascript
+console.log(NaN < 10);
+```
+
+**Explanation:** this will print false because when we compare anything to NaN it always gives the output false.
+
+---
+
+## 7. Greater Than or Equal To (>=)
+
+### Q1
+
+```javascript
+let minimumMarks = 75;
+let studentScored = 75;
+let Result = 75 >= 75;
+console.log("Student is passed : ", Result )
+```
+
+### Q2
+
+```javascript
+let ticketPrice = 300;
+let personBalance = 300;
+console.log("He can buy the ticket :" , personBalance >= ticketPrice)
+```
+
+### Q3
+
+```javascript
+console.log(25 >= 25);
+output: true
+
+console.log(30 >= 25);
+output: true
+
+console.log(20 >= 25);
+output: false
+```
+
+### Q4
+
+```javascript
+console.log("25" >= 25);
+output: true
+
+console.log("10" >= "2");
+output: false
+
+console.log(null >= 0);
+output: false
+```
+
+### Q5
+
+```javascript
+console.log(undefined>=0);
+```
+
+**Output:** false
+
+**Explanation:** In Js undefined means a value has not been assigned yet. When we compare undefined >= 0 JavaScript treat it as NaN and comparing anything with NaN will gives us false only.
+
+### Q6
+
+```javascript
+let maxCapacity = 8;
+let peopleInside = 8;
+let isFullOrOverloaded = peopleInside >= maxCapacity;
+console.log(isFullOrOverloaded)
+```
+
+### Q7
+
+```javascript
+console.log(true >= 1);
+output: true
+```
+
+**Explanation:** it will give true as value of true is one and 1 is equal to 1 therefore output is true
+
+```javascript
+console.log("" >= 0);
+output: true
+```
+
+**Explanation:** With >= js compares a string and a number by converting the string to a number first and value of empty string is 0 therefore output will be true
+
+```javascript
+console.log(NaN >= NaN);
+output: false
+```
+
+**Explanation:** anything compared to NaN will give the output as false.
+
+---
+
+## 8. Less Than or Equal To (<=)
+
+### Q1
+
+```javascript
+let speedLimit = 60;
+let vehicleSpeed = 60;
+let isWithinLimit = vehicleSpeed <= speedLimit;
+console.log("Vehicle is within the limit : ", isWithinLimit);
+```
+
+### Q2
+
+```javascript
+let passingMarks = 40;
+let studentScored = 39;
+console.log("Student has failed : ", studentScored <= 39);
+```
+
+### Q3
+
+```javascript
+console.log(15 <= 20);
+output: true
+
+console.log(20 <= 15);
+output: false
+
+console.log(15 <= 15);
+output: true
+```
+
+### Q4
+
+```javascript
+console.log("15" <= 20);
+output: true
+```
+
+**Explanation:** one side is a number, so JS converts "15" into 15 and then 15 <= 20 is true.
+
+```javascript
+console.log("30" <= "5");
+output: true
+```
+
+**Explanation:** both are strings, so JS compares them character by character, not as numbers. "3" comes before "5", so the output is true.
+
+```javascript
+console.log(null <= 0);
+output: true
+```
+
+**Explanation:** in comparisons null is treated as 0, so 0 <= 0 is true.
+
+### Q5
+
+```javascript
+console.log(undefined <= 0);
+output: false
+```
+
+**Explanation:** undefined means a value has not been assigned. When we compare it, JS converts it to NaN, and comparing anything with NaN always gives false.
+
+### Q6
+
+```javascript
+let maxBooks = 10;
+let currentBooks = 10;
+let canAddMore = currentBooks + 1 <= maxBooks;
+console.log("More books can be added : ", canAddMore);
+```
+
+### Q7
+
+```javascript
+console.log(false <= 0);
+output: true
+```
+
+**Explanation:** false is converted to 0, so 0 <= 0 is true.
+
+```javascript
+console.log("" <= 0);
+output: true
+```
+
+**Explanation:** JS converts an empty string to 0, so 0 <= 0 is true.
+
+```javascript
+console.log(NaN <= 5);
+output: false
+```
+
+**Explanation:** anything compared with NaN gives false.
+
+---
+
+## Mixed Practice
+
+### Q1
+
+```javascript
+let votingAge = 18;
+let personAge = 18;
+console.log("Eligible to vote: ", personAge >= votingAge);
+
+let temperature = 32;
+console.log("Temperature is below 35: ", temperature < 35);
+
+let score = 90;
+console.log("Score is above 85: ", score > 85);
+```
+
+### Q2
+
+```javascript
+console.log("10" >= 10);
+output: true
+
+console.log(null <= undefined);
+output: false
+```
+
+### Q3
+
+```javascript
+let productPrice = 499;
+let customerMoney = 500;
+console.log("Customer can buy the product: ", customerMoney >= productPrice);
+console.log("Change will be left: ", customerMoney > productPrice);
+console.log("Customer does not have enough money: ", customerMoney < productPrice);
+```
+
+### Q4
+
+```javascript
+console.log("10" > "2");
+output: false
+
+console.log(10 > 2);
+output: true
+```
